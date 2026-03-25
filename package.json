@@ -1,0 +1,14 @@
+{
+  "name": "materiallist",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Material List Application",
+  "scripts": {
+    "start": "fiori run --open index.html",
+    "start-alt": "ui5 serve --open index.html"
+  },
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "1.15.4",
+    "@ui5/cli": "^3.11.13"
+  }
+}

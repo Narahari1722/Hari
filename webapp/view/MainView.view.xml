@@ -1,0 +1,60 @@
+<mvc:View
+  controllerName="com.aifalabs.materiallist.controller.MainView"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+  <Shell>
+    <App>
+      <pages>
+        <Page title="Material List">
+          <subHeader>
+            <Toolbar>
+              <Title text="Material List" level="H4"/>
+              <ToolbarSpacer/>
+              <Button text="Refresh" icon="sap-icon://refresh" press=".onRefresh"/>
+            </Toolbar>
+          </subHeader>
+          <content>
+            <Table id="materialTable" items="{/ZDDLS_SAMPLE_VINAY}" growing="true" growingThreshold="20" busyIndicatorDelay="0">
+              <headerToolbar>
+                <Toolbar>
+                  <Title id="tableTitle" text="Materials"/>
+                  <ToolbarSpacer/>
+                  <SearchField id="searchField" width="300px" search=".onSearch" placeholder="Search..."/>
+                </Toolbar>
+              </headerToolbar>
+              <columns>
+                <Column width="5rem"><Text text="Material No."/></Column>
+                <Column width="10rem"><Text text="Description"/></Column>
+                <Column width="10rem"><Text text="Match Codes"/></Column>
+                <Column width="5rem"><Text text="Mat. Group"/></Column>
+                <Column width="5rem"><Text text="Gross Wt."/></Column>
+                <Column width="5rem"><Text text="Net Wt."/></Column>
+                <Column width="10rem"><Text text="Last Changed"/></Column>
+                <Column width="10rem"><Text text="Created Date"/></Column>
+                <Column width="5rem"><Text text="Language"/></Column>
+                <Column width="5rem"><Text text="Status"/></Column>
+              </columns>
+              <items>
+                <ColumnListItem vAlign="Middle">
+                  <cells>
+                    <Text text="{MATERIAL_NUMBER}"/>
+                    <Text text="{Material_Description}"/>
+                    <Text text="{Matchcodes}"/>
+                    <Text text="{MATERIAL_GROUP}"/>
+                    <Text text="{GROSS_WEIGHT}"/>
+                    <Text text="{NET_WEIGHT}"/>
+                    <Text text="{DATE_LAST_CHANGE}"/>
+                    <Text text="{NAME_OF_PERSON}"/>
+                    <Text text="{Language_Key}"/>
+                    <Text text="{vpsta}"/>
+                  </cells>
+                </ColumnListItem>
+              </items>
+            </Table>
+          </content>
+        </Page>
+      </pages>
+    </App>
+  </Shell>
+</mvc:View>
